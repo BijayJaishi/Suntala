@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#ffffff"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:src="@drawable/cart"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/fruitimage"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="2dp"/>
+
+
+    <TextView
+        android:textSize="16sp"
+        android:id="@+id/fruitname"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/fruitimage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fruit Name"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+
+        <TextView
+
+            android:textColor="#F6A122"
+            android:id="@+id/fruitcost"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/fruitimage"
+            android:layout_below="@+id/fruitname"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fruit Cost"
+
+            />
+
+        <TextView
+
+
+            android:id="@+id/middlebar"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/fruitcost"
+            android:layout_below="@+id/fruitname"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+
+            />
+
+        <TextView
+
+            android:textColor="#F6A122"
+            android:layout_marginRight="10dp"
+            android:id="@+id/fruittype"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/fruitcost"
+            android:layout_below="@+id/fruitname"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Fruit Tpye"
+
+            />
+
+        <TextView
+
+            android:id="@+id/fruitdescription"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/fruitimage"
+            android:layout_below="@+id/fruitcost"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fruit Description"
+            android:ellipsize="end"
+            android:maxLines="2"
+
+            />
+
+        <Button
+            android:id="@+id/addcart_button"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/fruitname"
+            android:layout_below="@+id/fruitimage"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="Add to Cart"
+            android:textColor="#ffffff"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

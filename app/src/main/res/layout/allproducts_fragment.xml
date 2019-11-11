@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeFragment"
+    android:background="#F6A122"
+    tools:context="com.kumar.dipanshu.residemenu.Fragments.Allproducts_fragment">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+
+            android:layout_marginTop="20dp"
+            android:background="@drawable/menu"
+            android:id="@+id/title_bar_left_menu"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+
+            android:layout_marginTop="20dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/cart"
+            android:id="@+id/title_bar_right_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/producttext"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="All Products"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title_bar_left_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productrecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/producttext"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</FrameLayout>

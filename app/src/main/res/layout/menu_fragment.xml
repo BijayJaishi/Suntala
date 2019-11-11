@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:onClick="showPage"
     android:background="#ffffff"
-    tools:context="com.kumar.dipanshu.residemenu.Fragments.FifthMenuFragment">
+    tools:context="com.kumar.dipanshu.residemenu.Fragments.MenuFragment"
+    tools:ignore="OnClick">
 
 <!--    <ImageView-->
 <!--        android:layout_width="match_parent"-->
@@ -50,7 +51,7 @@
             android:id="@+id/linearLayout">
 
             <Button
-                android:id="@+id/homeButton"
+                android:id="@+id/DashboardButton"
                 style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -58,12 +59,13 @@
                 android:fontFamily="sans-serif"
                 android:text="Dashboard"
                 android:gravity="end"
+
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/profileButton"
+                android:id="@+id/ourmenuButton"
                 style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -77,7 +79,7 @@
                 />
 
             <Button
-                android:id="@+id/calendarButton"
+                android:id="@+id/allproductsButton"
                 style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -91,7 +93,7 @@
                 />
 
             <Button
-                android:id="@+id/settingsButton"
+                android:id="@+id/cartButton"
                 style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"

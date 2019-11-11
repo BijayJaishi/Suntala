@@ -6,9 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.kumar.dipanshu.residemenu.Fragments.ContentFragment;
-import com.kumar.dipanshu.residemenu.Fragments.FifthMenuFragment;
-import com.kumar.dipanshu.residemenu.Fragments.HomeFragment;
+import com.kumar.dipanshu.residemenu.Fragments.Dashboardfragment;
+import com.kumar.dipanshu.residemenu.Fragments.MenuFragment;
 import com.kumar.dipanshu.residemenu.Fragments.SixthMenuFragment;
 import com.kumar.dipanshu.residemenu.ResideTransformation.CornerReside;
 
@@ -40,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 //                break;
 //        }
 
-        myPagerAdapter.addFragments(new FifthMenuFragment());
-        myPagerAdapter.addFragments(new ContentFragment());
+        myPagerAdapter.addFragments(new MenuFragment());
+        myPagerAdapter.addFragments(new Dashboardfragment());
         myPagerAdapter.addFragments(new SixthMenuFragment());
 
         viewPager.setPageTransformer(true, new CornerReside());
