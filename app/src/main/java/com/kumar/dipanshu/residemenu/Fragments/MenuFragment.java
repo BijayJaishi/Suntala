@@ -92,7 +92,7 @@ public class MenuFragment extends Fragment {
                     dashboard.setBackgroundColor(getResources().getColor(R.color.white));
                     allproducts.setBackgroundColor(getResources().getColor(R.color.white));
                     Toast.makeText(getContext(), "You clicked Cart", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Dashboardfragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Mycart_fragment()).commit();
                     MainActivity.viewPager.setCurrentItem(1);
                 }
             });

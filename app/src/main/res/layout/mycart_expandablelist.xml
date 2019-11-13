@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:src="@drawable/cart"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/cartfruitimage"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="2dp"/>
+
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/cartfruitname"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/cartfruitimage"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fruit Name"
+            android:textColor="#000"
+            android:textStyle="bold"
+            />
+
+        <TextView
+
+            android:textColor="#F6A122"
+            android:id="@+id/cartfruitcost"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/cartfruitimage"
+            android:layout_below="@+id/cartfruitname"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fruit Cost"
+
+            />
+
+        <TextView
+
+
+            android:id="@+id/middlebar"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/cartfruitcost"
+            android:layout_below="@+id/cartfruitname"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+
+            />
+
+        <TextView
+
+            android:textColor="#F6A122"
+            android:layout_marginRight="10dp"
+            android:id="@+id/cartfruittype"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/cartfruitcost"
+            android:layout_below="@+id/cartfruitname"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Fruit Tpye"
+
+            />
+
+        <TextView
+
+            android:id="@+id/cartfruitdescription"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/cartfruitimage"
+            android:layout_below="@+id/cartfruitcost"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fruit Description"
+            android:ellipsize="end"
+            android:maxLines="2"
+            />
+
+
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/number_button"
+            android:layout_marginBottom="10dp"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            app:backGroundColor="@color/colorPrimary"
+            app:textSize="8sp"
+            android:layout_toRightOf="@id/cartfruitimage"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/cartfruitimage"
+             />
+
+        <Button
+
+            android:layout_marginBottom="10dp"
+            android:id="@+id/removecart_button"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/cartfruitname"
+            android:layout_below="@+id/cartfruitimage"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="Remove From Cart"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

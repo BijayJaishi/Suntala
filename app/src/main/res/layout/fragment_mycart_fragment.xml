@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F6A122"
+    tools:context="com.kumar.dipanshu.residemenu.Fragments.Mycart_fragment">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize">-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <RelativeLayout
+        android:id="@+id/relativecart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/menu"
+            android:id="@+id/title_bar_left_menu"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/mycarttext"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="My Cart"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title_bar_left_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/relativecart"
+        android:layout_above="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.kumar.dipanshu.residemenu.ExpandableHeightListView
+                android:id="@+id/expandableHeightview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.kumar.dipanshu.residemenu.ExpandableHeightListView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/subtotal"
+                        android:textColor="#000"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total  : "/>
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/subcost"
+                        android:layout_marginTop="8dp"
+                       android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Cost"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/shippingcharge"
+                        android:layout_below="@+id/subcost"
+                        android:textColor="#000"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping Charge  : "/>
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_below="@+id/subcost"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/shippingcost"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping Cost"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/specialdiscount"
+                        android:layout_below="@+id/shippingcharge"
+                        android:textColor="#000"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Special Discount  : "/>
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_below="@+id/shippingcost"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/discount"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/totalamount"
+                        android:layout_below="@+id/specialdiscount"
+                        android:textColor="#000"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Total Amount"/>
+
+                    <TextView
+
+                        android:textColor="#000"
+                        android:layout_below="@+id/discount"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/totalcost"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Total Cost"
+                        android:textStyle="bold"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:text="Proceed To Checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
