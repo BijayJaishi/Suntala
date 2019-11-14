@@ -9,7 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.kumar.dipanshu.residemenu.MainActivity;
 import com.kumar.dipanshu.residemenu.Model_class;
 import com.kumar.dipanshu.residemenu.R;
 import com.kumar.dipanshu.residemenu.recycler_adapter.Productlist_adapter;
@@ -43,6 +45,23 @@ public class Allproducts_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         productrecycle = view.findViewById(R.id.productrecycle);
+
+        Button title_bar_left_menu = view.findViewById(R.id.title_bar_left_menu);
+        title_bar_left_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                MainActivity.viewPager.getCurrentItem() == 0 ?  : MainActivity.viewPager.setCurrentItem(0);
+
+
+                if (MainActivity.viewPager.getCurrentItem() == 0){
+                    MainActivity.viewPager.setCurrentItem(1);
+                }else{
+
+                    MainActivity.viewPager.setCurrentItem(0);
+                }
+            }
+        });
 
         model_classes = new ArrayList<>();
         model_classes.add(new Model_class("1",R.drawable.tropicana,"Tropicana Smooth Juice","Rs 5000.00","Orange Juice","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."));

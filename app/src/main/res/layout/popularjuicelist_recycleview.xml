@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
-    android:layout_height="260dp"
+    android:layout_width="170dp"
+    android:id="@+id/popularproduct_card"
+    android:layout_height="wrap_content"
     app:cardCornerRadius="10dp"
-    android:layout_marginRight="15dp"
-    android:elevation="13dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="#F6A122">
     <RelativeLayout
@@ -12,9 +13,12 @@
         android:layout_height="match_parent">
 
     <TextView
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
         android:textStyle="bold"
         android:id="@+id/fruitnamee"
         android:layout_marginTop="12dp"
+        android:textSize="@dimen/_11sdp"
         android:textColor="#000"
         android:layout_marginLeft="4dp"
         android:layout_width="wrap_content"
@@ -23,18 +27,22 @@
         />
 
         <TextView
+            android:textSize="@dimen/_9sdp"
             android:layout_marginTop="2dp"
+            android:padding="3dp"
             android:id="@+id/fruitcostt"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="4dp"
             android:textColor="#000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fruit Name"
+            android:text="Fruit Cost"
             />
 
         <TextView
 
+            android:padding="3dp"
+            android:textSize="@dimen/_9sdp"
             android:id="@+id/fruitamount"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/fruitcostt"
@@ -57,22 +65,25 @@
             />
 
         <TextView
+            android:padding="3dp"
             android:id="@+id/fruitdescriptionn"
             android:layout_below="@+id/fruitimagee"
+            android:layout_above="@+id/addcart_button"
             android:layout_marginTop="8dp"
             android:layout_marginRight="4dp"
+            android:textSize="@dimen/_8sdp"
             android:layout_marginLeft="8dp"
             android:textColor="#000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
             android:text="Fruit Description"
             android:ellipsize="end"
             android:maxLines="3"
             />
 
         <Button
-
-            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
             android:id="@+id/addcart_buttonn"
             android:layout_width="120dp"
             android:layout_height="30dp"
@@ -80,8 +91,8 @@
             android:background="@drawable/button_background"
             android:gravity="center"
             android:text="Add to Cart"
+            android:layout_marginTop="@dimen/_10sdp"
             android:textColor="#ffffff"
-            android:layout_marginTop="30dp"
             android:textAllCaps="false" />
 
 

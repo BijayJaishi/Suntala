@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.kumar.dipanshu.residemenu.SplashScreen">
 
-
     <ImageView
         android:id="@+id/sape"
-        android:layout_width="420dp"
-        android:layout_height="300dp"
-        android:src="@drawable/ic_shape_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/shapeone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView

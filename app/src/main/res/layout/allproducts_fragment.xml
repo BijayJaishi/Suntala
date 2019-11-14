@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:id="@+id/homeFragment"
     android:background="#F6A122"
+    android:clickable="true"
+    android:focusable="true"
     tools:context="com.kumar.dipanshu.residemenu.Fragments.Allproducts_fragment">
 
     <RelativeLayout
@@ -13,8 +15,8 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
 
             android:layout_marginTop="20dp"
             android:background="@drawable/menu"

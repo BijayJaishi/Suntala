@@ -51,84 +51,88 @@ public class MenuFragment extends Fragment {
             }
         });
 
-        if (isVisible()){
-            dashboard.setOnClickListener(new View.OnClickListener() {
+        if (getActivity() != null){
+            if (isVisible()){
 
-                @Override
-                public void onClick(View v) {
-                    dashboard.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
-                    allproducts.setBackgroundColor(getResources().getColor(R.color.white));
-                    cart.setBackgroundColor(getResources().getColor(R.color.white));
-                    login.setBackgroundColor(getResources().getColor(R.color.white));
-                    Toast.makeText(getContext(), "You clicked Dashboard", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Dashboardfragment()).commit();
-                    MainActivity.viewPager.setCurrentItem(1);
-                }
-            });
 
-            ourmenu.setOnClickListener(new View.OnClickListener() {
-                //            @SuppressLint("ResourceAsColor")
-                @Override
-                public void onClick(View v) {
-                    ourmenu.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    dashboard.setBackgroundColor(getResources().getColor(R.color.white));
-                    allproducts.setBackgroundColor(getResources().getColor(R.color.white));
-                    cart.setBackgroundColor(getResources().getColor(R.color.white));
-                    login.setBackgroundColor(getResources().getColor(R.color.white));
-                    Toast.makeText(getContext(), "You clicked Our Menu", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
-                    MainActivity.viewPager.setCurrentItem(1);
-                }
-            });
+                dashboard.setOnClickListener(new View.OnClickListener() {
 
-            cart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dashboard.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
+                        allproducts.setBackgroundColor(getResources().getColor(R.color.white));
+                        cart.setBackgroundColor(getResources().getColor(R.color.white));
+                        login.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked Dashboard", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().beginTransaction().replace(R.id.contentPage,new Dashboardfragment()).commit();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
 
-                @Override
-                public void onClick(View v) {
-                    cart.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
-                    login.setBackgroundColor(getResources().getColor(R.color.white));
-                    dashboard.setBackgroundColor(getResources().getColor(R.color.white));
-                    allproducts.setBackgroundColor(getResources().getColor(R.color.white));
-                    Toast.makeText(getContext(), "You clicked Cart", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Mycart_fragment()).commit();
-                    MainActivity.viewPager.setCurrentItem(1);
-                }
-            });
+                ourmenu.setOnClickListener(new View.OnClickListener() {
+                    //            @SuppressLint("ResourceAsColor")
+                    @Override
+                    public void onClick(View v) {
+                        ourmenu.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        dashboard.setBackgroundColor(getResources().getColor(R.color.white));
+                        allproducts.setBackgroundColor(getResources().getColor(R.color.white));
+                        cart.setBackgroundColor(getResources().getColor(R.color.white));
+                        login.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked Our Menu", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
 
-            allproducts.setOnClickListener(new View.OnClickListener() {
-                //            @SuppressLint("ResourceAsColor")
-                @Override
-                public void onClick(View v) {
-                    allproducts.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    dashboard.setBackgroundColor(getResources().getColor(R.color.white));
-                    cart.setBackgroundColor(getResources().getColor(R.color.white));
-                    ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
-                    login.setBackgroundColor(getResources().getColor(R.color.white));
-                    Toast.makeText(getContext(), "You clicked All Products", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
-                    MainActivity.viewPager.setCurrentItem(1);
-                }
-            });
+                cart.setOnClickListener(new View.OnClickListener() {
 
-            login.setOnClickListener(new View.OnClickListener() {
-                //            @SuppressLint("ResourceAsColor")
-                @Override
-                public void onClick(View v) {
-                    login.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    dashboard.setBackgroundColor(getResources().getColor(R.color.white));
-                    cart.setBackgroundColor(getResources().getColor(R.color.white));
-                    ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
-                    allproducts.setBackgroundColor(getResources().getColor(R.color.white));
-                    Toast.makeText(getContext(), "You clicked Login", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
-                    MainActivity.viewPager.setCurrentItem(1);
-                }
-            });
+                    @Override
+                    public void onClick(View v) {
+                        cart.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
+                        login.setBackgroundColor(getResources().getColor(R.color.white));
+                        dashboard.setBackgroundColor(getResources().getColor(R.color.white));
+                        allproducts.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked Cart", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().beginTransaction().replace(R.id.contentPage,new Mycart_fragment()).commit();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
+
+                allproducts.setOnClickListener(new View.OnClickListener() {
+                    //            @SuppressLint("ResourceAsColor")
+                    @Override
+                    public void onClick(View v) {
+                        allproducts.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        dashboard.setBackgroundColor(getResources().getColor(R.color.white));
+                        cart.setBackgroundColor(getResources().getColor(R.color.white));
+                        ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
+                        login.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked All Products", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
+
+                login.setOnClickListener(new View.OnClickListener() {
+                    //            @SuppressLint("ResourceAsColor")
+                    @Override
+                    public void onClick(View v) {
+                        login.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        dashboard.setBackgroundColor(getResources().getColor(R.color.white));
+                        cart.setBackgroundColor(getResources().getColor(R.color.white));
+                        ourmenu.setBackgroundColor(getResources().getColor(R.color.white));
+                        allproducts.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked Login", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().beginTransaction().replace(R.id.contentPage,new Allproducts_fragment()).commit();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
+            }
+
+
         }
-
-
 
 //        home.setOnClickListener(this);
 //        ourmenu.setOnClickListener(this);

@@ -19,27 +19,33 @@
 
     <ImageView
         android:id="@+id/imagefront"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/freshorganicjuice"
         app:layout_constraintBottom_toBottomOf="@+id/sape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintHorizontal_bias="0.837"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.84" />
+
+
+
+
 
     <android.support.design.widget.TextInputLayout
 
         android:id="@+id/name"
+        android:textColorHint="#DC143C"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/FloatingLabel"
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/sape">
 
         <EditText
-
+            android:textColor="#666"
             android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +55,6 @@
             android:drawableRight="@drawable/envelop"
             android:hint="Username"
             android:inputType="text"
-            android:textColor="#DC143C"
             android:textColorHint="#DC143C"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +67,10 @@
     <android.support.design.widget.TextInputLayout
 
         android:id="@+id/textInputLayout"
+        android:textColorHint="#DC143C"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/FloatingLabel"
         app:layout_constraintTop_toBottomOf="@+id/name">
 
 
@@ -146,4 +153,18 @@
         app:layout_constraintTop_toBottomOf="@+id/login_btn"
         android:textColor="#DC143C"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:textColor="#DC143C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="317dp"
+        android:layout_marginTop="236dp"
+        android:text="Login"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/imagefront"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sape"
+        app:layout_constraintTop_toTopOf="@+id/sape" />
 </android.support.constraint.ConstraintLayout>

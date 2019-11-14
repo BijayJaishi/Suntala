@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.kumar.dipanshu.residemenu.Model_mycart;
 import com.kumar.dipanshu.residemenu.R;
 
@@ -40,6 +41,7 @@ public class Expandablelistcart_adapter extends ArrayAdapter<Model_mycart> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup viewGroup) {
         View view;
+        final ElegantNumberButton number_button
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.mycart_expandablelist, viewGroup, false);
@@ -55,6 +57,14 @@ public class Expandablelistcart_adapter extends ArrayAdapter<Model_mycart> {
             cartfruittype.setText(model_mycart.getCartfruittype());
             cartfruitdescription.setText(model_mycart.getCartfruitdescription());
             cartfruitimage.setImageResource(model_mycart.getCartimage());
+
+             number_button = view.findViewById(R.id.number_button);
+             number_button.setOnClickListener(new ElegantNumberButton.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String num = number_button.getNumber();
+                }
+            });
         }else{
             view = convertView;
         }

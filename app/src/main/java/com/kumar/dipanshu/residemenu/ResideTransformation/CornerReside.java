@@ -49,7 +49,8 @@ public class CornerReside implements ViewPager.PageTransformer {
 
             }
             //when we swipe to right this code applied
-            else if (position > 0) {
+            else
+            if (position > 0) {
 
                 //first we do scaling to 50%
                 float scale = Math.max(0.65f, 1 - Math.abs(position));

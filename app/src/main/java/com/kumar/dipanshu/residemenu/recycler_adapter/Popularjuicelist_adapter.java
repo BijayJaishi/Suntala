@@ -1,6 +1,8 @@
 package com.kumar.dipanshu.residemenu.recycler_adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kumar.dipanshu.residemenu.MainActivity;
 import com.kumar.dipanshu.residemenu.Model_classpopular;
+import com.kumar.dipanshu.residemenu.Popularjuiceinfo;
 import com.kumar.dipanshu.residemenu.R;
 
 import java.util.List;
@@ -46,6 +50,20 @@ public class Popularjuicelist_adapter extends RecyclerView.Adapter<Popularjuicel
         myViewholder.fruitimagee.setImageResource(model_classpopular.getImage());
         myViewholder.fruitdescriptionn.setText(model_classpopular.getFruitdescriptionn());
 
+        myViewholder.popularproduct_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context,Popularjuiceinfo.class);
+                intent.putExtra("popularjuicename",model_classpopular.getFruitnamee());
+                intent.putExtra("popularjuiceimage",model_classpopular.getImage());
+                intent.putExtra("popularjuicedescription",model_classpopular.getFruitdescriptionn());
+                intent.putExtra("popularjuicecost",model_classpopular.getFruitcostt());
+                intent.putExtra("popularjuiceamount",model_classpopular.getFruitamount());
+                context.startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -59,6 +77,7 @@ public class Popularjuicelist_adapter extends RecyclerView.Adapter<Popularjuicel
         TextView fruitnamee, fruitcostt, fruitamount, fruitdescriptionn;
         ImageView fruitimagee;
         Button addcart_buttonn;
+        CardView popularproduct_card;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -69,6 +88,7 @@ public class Popularjuicelist_adapter extends RecyclerView.Adapter<Popularjuicel
             fruitdescriptionn = itemView.findViewById(R.id.fruitdescriptionn);
             fruitimagee = itemView.findViewById(R.id.fruitimagee);
             addcart_buttonn = itemView.findViewById(R.id.addcart_buttonn);
+            popularproduct_card = itemView.findViewById(R.id.popularproduct_card);
         }
     }
 }

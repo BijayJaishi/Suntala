@@ -6,8 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.kumar.dipanshu.residemenu.ExpandableHeightListView;
+import com.kumar.dipanshu.residemenu.MainActivity;
 import com.kumar.dipanshu.residemenu.Model_mycart;
 import com.kumar.dipanshu.residemenu.R;
 import com.kumar.dipanshu.residemenu.recycler_adapter.Expandablelistcart_adapter;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mycart_fragment extends Fragment {
+
 
     Expandablelistcart_adapter expandablelistcart_adapter;
     List<Model_mycart>model_mycarts;
@@ -38,6 +41,22 @@ public class Mycart_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         expandableHeightListView = view.findViewById(R.id.expandableHeightview);
+        Button title_bar_left_menu = view.findViewById(R.id.title_bar_left_menu);
+        title_bar_left_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                MainActivity.viewPager.getCurrentItem() == 0 ?  : MainActivity.viewPager.setCurrentItem(0);
+
+
+                if (MainActivity.viewPager.getCurrentItem() == 0){
+                    MainActivity.viewPager.setCurrentItem(1);
+                }else{
+
+                    MainActivity.viewPager.setCurrentItem(0);
+                }
+            }
+        });
 
         model_mycarts = new ArrayList<>();
         model_mycarts.add(new Model_mycart("1",R.drawable.tropicana,"Tropicana Smooth Juice","Rs 5000.00","Orange Juice","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."));
@@ -58,6 +77,8 @@ public class Mycart_fragment extends Fragment {
         expandablelistcart_adapter = new Expandablelistcart_adapter(getActivity(),0,model_mycarts);
         expandableHeightListView.setAdapter(expandablelistcart_adapter);
         expandableHeightListView.setExpanded(true);
+
+
     }
 
 
