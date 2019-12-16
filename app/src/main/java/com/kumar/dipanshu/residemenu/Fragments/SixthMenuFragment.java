@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.kumar.dipanshu.residemenu.MainActivity;
 import com.kumar.dipanshu.residemenu.R;
 
-public class SixthMenuFragment extends Fragment implements View.OnClickListener {
+public class SixthMenuFragment extends Fragment {
+    Button share, about;
 
 
     public SixthMenuFragment() {
@@ -29,22 +32,46 @@ public class SixthMenuFragment extends Fragment implements View.OnClickListener 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button share = (Button) view.findViewById(R.id.shareButton);
-        Button about = (Button) view.findViewById(R.id.aboutButton);
+        share = view.findViewById(R.id.shareButton);
+        about = view.findViewById(R.id.aboutButton);
+        ImageView btnClose = view.findViewById(R.id.btnClose);
 
-        share.setOnClickListener(this);
-        about.setOnClickListener(this);
-    }
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.viewPager.setCurrentItem(1);
+            }
+        });
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.shareButton:
-                Toast.makeText(getContext(), "You clicked SHARE", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.aboutButton:
-                Toast.makeText(getContext(), "You clicked ABOUT", Toast.LENGTH_SHORT).show();
-                break;
+        if (getActivity() != null) {
+            if (isVisible()) {
+
+
+                share.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        share.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        about.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked Share", Toast.LENGTH_SHORT).show();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
+
+                about.setOnClickListener(new View.OnClickListener() {
+                    //            @SuppressLint("ResourceAsColor")
+                    @Override
+                    public void onClick(View v) {
+                        about.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        share.setBackgroundColor(getResources().getColor(R.color.white));
+                        Toast.makeText(getContext(), "You clicked About", Toast.LENGTH_SHORT).show();
+                        MainActivity.viewPager.setCurrentItem(1);
+                    }
+                });
+
+
+            }
         }
     }
 }
+

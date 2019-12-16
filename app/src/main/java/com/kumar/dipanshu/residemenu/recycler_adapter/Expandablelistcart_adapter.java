@@ -1,8 +1,6 @@
 package com.kumar.dipanshu.residemenu.recycler_adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,8 @@ import android.widget.TextView;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.kumar.dipanshu.residemenu.Model_mycart;
 import com.kumar.dipanshu.residemenu.R;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class Expandablelistcart_adapter extends ArrayAdapter<Model_mycart> {
     Context context;
     List<Model_mycart>model_mycarts;
 
-    public Expandablelistcart_adapter(@NonNull Context context, int resource,List<Model_mycart> model_mycarts) {
+    public Expandablelistcart_adapter(Context context, int resource,List<Model_mycart> model_mycarts) {
         super(context, resource);
         this.context = context;
         this.model_mycarts = model_mycarts;
@@ -37,11 +37,11 @@ public class Expandablelistcart_adapter extends ArrayAdapter<Model_mycart> {
         return model_mycarts.size();
     }
 
-    @NonNull
+
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup viewGroup) {
+    public View getView(int position, @Nullable View convertView, ViewGroup viewGroup) {
         View view;
-        final ElegantNumberButton number_button
+        final ElegantNumberButton number_button;
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.mycart_expandablelist, viewGroup, false);

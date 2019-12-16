@@ -2,7 +2,6 @@ package com.kumar.dipanshu.residemenu.Fragments;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +15,9 @@ import com.kumar.dipanshu.residemenu.Model_newitem;
 import com.kumar.dipanshu.residemenu.R;
 import com.kumar.dipanshu.residemenu.recycler_adapter.Newitemlist_adapter;
 import com.kumar.dipanshu.residemenu.recycler_adapter.Popularjuicelist_adapter;
+
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,10 +109,8 @@ public class Dashboardfragment extends Fragment {
         LinearLayoutManager layoutManagersecond
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         secondrecycle.setLayoutManager(layoutManagersecond);
-
         newitemlist_adapter = new Newitemlist_adapter(getActivity(),model_newitems);
         secondrecycle.setAdapter(newitemlist_adapter);
-
     }
 
 //    @Override
